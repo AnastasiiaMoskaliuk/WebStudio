@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
+/*=============================================================
+========================== General ============================
+=============================================================*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 0.9;
+  font-weight: 400;
+  color: #212121;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button{
+  cursor: pointer;
+}
+
+h2{
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+/*=============================================================
+========================== Header =============================
+=============================================================*/
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.header-logo .accent {
+  color: #2196f3;
+}
+
+/*=============================================================
+====================== Navigation =============================
+=============================================================*/
+
+.navigation-list {
+  display: flex;
+  padding-right: 90px;
+}
+
+.navigation-item {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  margin: 5px;
+
+  color: black;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.navigation-item:hover {
+  color: #2196f3;
+}
+
+.navigation-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background-color: #2196f3;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.navigation-item:hover::after {
+  opacity: 1;
+}
+
+.navigation-link {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-contact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #757575;
+
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.navigation-email {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #757575;
+
+  font-weight: 500;
+  line-height: 1.2;
+}
+.navigation-contacts-list {
+  display: flex;
+  gap: 30px;
+}
+
+.navigation-contact:hover {
+  color: #2196f3;
+}
+
+.navigation-email:hover {
+  color: #2196f3;
+}
+.navigation-contacts-link {
+  display: flex;
+}
+
+.navigation-contacts-link:hover .svg-concact,.navigation-contact{
+  fill: #2196f3;
+}
+
+.navigation-contacts-link:hover .svg-email,.navigation-email{
+  fill: #2196f3;
+}
+
+.svg-email, .svg-concact {
+  fill: #757575;
+}
+
+/*=============================================================
+================= Navigation-button ===========================
+=============================================================*/
+
+.button-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button {
+  width: 112px;
+  height: 38px;
+
+  color: #212121;
+    background: #f5f4fa; 
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.9;
+
+  border: none;
+  border-radius: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  color:#ffffff;
+  background: #2196F3;
+
+  transform: scale(1.05);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+
+/*=============================================================
+=========================== Cards =============================
+=============================================================*/
+
+.cards-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 0 200px;
+}
+
+.cards{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+    position: relative;
+
+  border: 1px solid #EEE;
+  background: #FFF;
+
+
+  transition: all 0.3s ease;
+}
+
+.cards:hover{
+  transform: scale(1.05);  
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.cards::before{  
+  display: block;
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 294px;
+
+  opacity: 0;
+  background-color: #2196F3E5;
+}
+
+.cards:hover::before{
+  opacity: 1;
+}
+
+.cards-text{
+display: flex;
+
+position:absolute;
+
+color: #ffffff;
+
+font-size: 18px;
+font-weight: 400;
+line-height: 1.5;
+
+top: 63px;
+left: 24px;
+
+opacity: 0;
+}
+
+.cards:hover .cards-text{
+  opacity: 1;
+}
+
+.cards-content{
+  padding: 20px 24px;
+  
+}
+
+
+
+
+
+/*=============================================================
+========================== Footer =============================
+=============================================================*/
+footer {
+  background-color: #2f303a;
+}
+
+.container--adress {
+  display: flex;
+  justify-content: center;  
+  align-items: baseline;
+
+  padding: 60px 0;
+  gap: 82px;
+}
+
+.footer-text {
+  color: #fff;
+
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* adress  */
+.footer-logo {
+  color: #ffffff;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.footer-logo .accent {
+  color: #2196f3;
+}
+
+.footer-link {
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+.footer-adress {
+  color: #ffffff;
+  line-height: 1.7;
+}
+.footer-contacts {
+  color: #ffffff99;
+  line-height: 1.7;
+}
+
+/* network  */
+.footer-list-network {
+  display: flex;  
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: #fff;
+
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.footer-network {
+  display: flex;
+  gap: 10px;
+}
+
+.network {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+}
+
+.network:hover {
+  background: #2196f3;
+  transform: scale(1.1);
+}
+.network-img {
+  width: 20px;
+  height: 20px;
+}
+
+/* email  */
+.email{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.email-input {
+  padding-left: 15px;  
+  margin-right: 12px;
+
+  width: 358px;
+  height: 49px;
+
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(33, 150, 243, 0);
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.email-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  background: #2196f3;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+
+  padding: 11px 34px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.email-button ::after {  
+  display: inline-block;
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  margin-left: 5px;
+
+  background-image: url(../img/index-img/modal/icon\ send.svg);
+  background-size: contain;
+
+}
+
+.email-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+

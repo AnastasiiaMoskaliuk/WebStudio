@@ -1,0 +1,863 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"); /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 20px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 60px;
+}
+@media screen and (max-width: 767.9px) {
+  .header {
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.header__logo .accent {
+  color: #2196f3;
+}
+
+.navigation {
+  display: flex;
+}
+@media screen and (max-width: 767.98px) {
+  .navigation__list {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    padding: 0 70px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .navigation__list {
+    padding-left: 0;
+    padding-right: 90px;
+  }
+}
+.navigation__item {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  margin: 5px;
+  color: black;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.navigation__item:hover {
+  color: #2196f3;
+}
+.navigation__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #2196f3;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.navigation__item:hover::after {
+  opacity: 1;
+}
+.navigation__link {
+  display: flex;
+  align-items: center;
+}
+.navigation__contact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #757575;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.navigation__contact:hover {
+  color: #2196f3;
+}
+@media screen and (max-width: 767.98px) {
+  .navigation__email {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__email {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #757575;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .navigation__email:hover {
+    color: #2196f3;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .navigation__contacts-list {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .navigation__contacts-list {
+    gap: 30px;
+  }
+}
+
+.navigation__contacts-link:hover .svg__concact,
+.navigation__contact {
+  fill: #2196f3;
+}
+
+.navigation__contacts-link:hover .svg__email,
+.navigation__email {
+  fill: #2196f3;
+}
+
+.svg__email,
+.svg__concact {
+  fill: #757575;
+}
+
+.button {
+  height: 38px;
+  color: #212121;
+  background: #f5f4fa;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.9;
+  border: none;
+  border-radius: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  color: #ffffff;
+  background: #2196f3;
+  transform: scale(1.05);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.button__nav-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.button__nav-list .button__nav:nth-child(1) .button {
+  width: 73px;
+}
+.button__nav-list .button__nav:nth-child(2) .button {
+  width: 125px;
+}
+.button__nav-list .button__nav:nth-child(3) .button {
+  width: 112px;
+}
+.button__nav-list .button__nav:nth-child(4) .button {
+  width: 103px;
+}
+.button__nav-list .button__nav:nth-child(5) .button {
+  width: 130px;
+}
+@media screen and (min-width: 768px) {
+  .button__nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 450px;
+  border: 1px solid #eee;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cards {
+    width: 370px;
+  }
+}
+.cards::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 294px;
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.8980392157);
+}
+@media screen and (min-width: 768px) {
+  .cards::before {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cards::before {
+    width: 370px;
+  }
+}
+.cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.cards:hover::before {
+  opacity: 1;
+}
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .cards__list {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cards__list {
+    padding: 0 200px;
+    justify-content: center;
+  }
+}
+.cards__img {
+  width: 450px;
+  height: 294px;
+}
+@media screen and (min-width: 768px) {
+  .cards__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .cards__img {
+    width: 370px;
+  }
+}
+.cards__text {
+  display: flex;
+  position: absolute;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  top: 63px;
+  left: 24px;
+  opacity: 0;
+}
+.cards:hover .cards__text {
+  opacity: 1;
+}
+.cards__content {
+  padding: 20px 24px;
+}
+
+.footer {
+  background-color: #2f303a;
+}
+.footer__adress-container {
+  text-align: center;
+}
+@media screen and (min-width: 1600px) {
+  .footer__adress-container {
+    text-align: start;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .footer__container {
+    align-items: baseline;
+    padding: 60px 0;
+    gap: 82px;
+  }
+}
+.footer__text {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1600px) {
+  .footer__text {
+    text-align: start;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+.footer__logo {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.footer__logo .accent {
+  color: #2196f3;
+}
+.footer__link {
+  color: #ffffff;
+  line-height: 1.7;
+}
+.footer__adress {
+  color: #ffffff;
+  line-height: 1.7;
+}
+.footer__contacts {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+}
+.footer__list-network {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1600px) {
+  .footer__list-network {
+    align-items: flex-start;
+  }
+}
+.footer__network {
+  display: flex;
+  gap: 10px;
+}
+.footer__form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .footer__form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .footer__form {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__email {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .footer__email {
+    width: auto;
+  }
+}
+.footer__email-input {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  width: 100%;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(33, 150, 243, 0);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 768px) {
+  .footer__email-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .footer__email-input {
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+.footer__email-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: #2196f3;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  padding: 11px 34px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.footer__email-button::after {
+  display: inline-block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-size: contain;
+  background-image: url(../../img/index-img/icon\ send.svg);
+}
+.footer__email-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+}
+.network:hover {
+  background: #2196f3;
+  transform: scale(1.1);
+}
+.network__img {
+  width: 20px;
+  height: 20px;
+}
+
+.burger__menu {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .burger__menu {
+    display: none;
+  }
+}
+.burger__button-open {
+  display: block;
+  padding: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .burger__button-open {
+    display: none;
+  }
+}
+.burger__button-close {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 23px;
+  top: 13px;
+  border: none;
+  background-color: transparent;
+}
+.burger__button-close:hover {
+  color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .burger__button-close {
+    display: none;
+  }
+}
+
+.mobile__nav-list {
+  display: grid;
+  gap: 32px;
+}
+.mobile__nav-item {
+  font-size: 40px;
+  color: black;
+  font-weight: 500;
+}
+.mobile__nav-item:hover {
+  color: #2196f3;
+}
+.mobile__nav-link {
+  margin-top: 300px;
+  margin-bottom: 40px;
+}
+.mobile__nav-contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.mobile__nav-contact {
+  font-size: 40px;
+  color: #757575;
+}
+.mobile__nav-contact:hover {
+  color: #2196f3;
+}
+.mobile__network-list {
+  display: flex;
+  margin-top: 32px;
+  gap: 20px;
+  position: relative;
+}
+.mobile__network {
+  font-size: 18px;
+  color: #2196f3;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 0.9;
+  font-weight: 400;
+  color: #212121;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+code {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h2 {
+  text-align: start;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+}/*# sourceMappingURL=portfolio.css.map */

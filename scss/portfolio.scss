@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
+@import "./utils/modern-normalize";
+@import "./utils/variables";
+@import "./utils/container";
+@import "./components/header";
+@import "./components/projects";
+@import "./components/posters";
+@import "./components/footer";
+@import "./components/mobile-menu";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 0.9;
+  font-weight: 400;
+  color: #212121;
+  margin: 0;
+  padding: 0;
+  @media screen and (min-width: 768px){
+    font-size: 16px;
+  }
+}
+
+code {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h2 {
+    text-align: start;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+}
